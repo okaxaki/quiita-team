@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { padding:0; margin:0; box-sizing:border-box;}
+html, body { width:100%; height:100%;}
+
+body { 
+	font-size:16px; 
+	background-color:#fff; 
+	font-family:Helvetica,Arial;
+	padding-bottom:72px;
+}
+
+.article {
+	padding:40px 80px;
+}
+
+.article h1 { 
+  margin-top:2em;
+  padding-bottom:.25em;
+  font-size:180%;
+  font-weight:bold;
+  border-bottom:1px solid #e8e8e8;
+}
+
+.article h2 { 
+  margin-top:2em;
+  padding-bottom:.25em;
+  font-size:160%;
+  font-weight:bold;
+  border-bottom:1px solid #e8e8e8;
+}
+
+.article h3 { 
+  margin-top:2em;
+  padding-bottom:.25em;
+  font-size:140%;
+  font-weight:bold;
+  border-bottom:1px solid #e8e8e8;
+}
+
+.article h4 { 
+  margin-top:2em;
+  padding-bottom:.25em;
+  font-size:100%;
+  font-weight:bold;
+  line-height:48px;
+  border-bottom:1px solid #e8e8e8;
+}
+
+.article h5 { 
+  margin-top:1em;
+  padding-bottom:.25em;
+  font-size:95%;
+  font-weight:bold;
+  border-bottom:1px solid #e8e8e8;
+}
+
+.article h6 { 
+  margin-top:1em;
+  padding-bottom:.25em;
+  font-size:90%;
+  font-weight:bold;
+  border-bottom:1px solid #e8e8e8;
+}
+
+
+.article p { 
+  font-size:16px;
+  line-height:200%;
+  margin:0.5em 0;
+}
+
+.article pre {
+  border-radius: 4px;
+  border:1px solid #ccc;
+  font-size:90%;
+	margin:2em 0;
+	padding:1em;
+  overflow-x:auto;
+}
+
+.article span.code {
+  border:1px solid #ccc;
+  border-radius:2px;
+  padding:0.25em;
+  margin:0 0.25em;
+}
+
+.article .quote {
+  border-left:4px solid #ccc;
+  padding:0.25em 1em;
+  margin:1em 0;
+}
+
+.highlight pre {font-family:Consolas, 'Courier New';}
+span.p {}
+span.c1 {color:gray;}
+span.n {}
+span.nb {color:green;}
+span.o {}
+span.kt {color:purple;}
+
+.article ul, ol { font-size:16px; margin:1em 0 2em 0;}
+.article ul > li { list-style-type:disc; }
+.article ol > li { list-style-type:decimal; }
+.article ul ul { margin:0 0 .5em 0;}
+.article ul ol { margin:0 0 .5em 0;}
+.article li { margin:.5em 0 .5em 2em;line-height:165%;}
+.article li p { font-size:inherit; margin-bottom:2em;}
+
+.article table { font-size:100%;border-spacing:0;border-collapse:collapse; margin:2em 0;}
+.article th { background-color:#cccccc; padding:0.5em;}
+.article td { border:1px solid #cccccc; padding:0.5em;}
+
+.article img { max-width:100%; }
+
+.header {font-size:32px; padding:20px 0 20px 80px; border-bottom:1px solid #ccc;}
+.header a {text-decoration:none;color:inherit;}
+.banner {
+	padding:56px 80px 20px 80px;
+	background-color:#79b74a;
+	color:#ffffff;
+}
+.banner .avatar {width:36px;height:36px;border-radius:4px;vertical-align: middle;margin:8px 4px 8px 0;}
+
+.banner .title {
+	font-size:32px;
+	font-weight: normal;
+}
+.banner .info {
+	height:64px;
+	font-size:14px;
+}
+
+.info a {
+	text-decoration: none;
+	color: inherit;
+	font-weight:bold;
+}
+
+.article hr {
+  border:none;
+  border-top:1px dashed #666;
+  margin:2em 0;
+}
+
+.comment { margin:20px 0 40px 0; }
+.comment .name {margin-left:4px;}
+.comment a.name {font-weight:bold;text-decoration: none;color:inherit;}
+.comment .avatar {width:40px;height:4-px;border-radius:4px;vertical-align: middle;}
+}
+
+</style>
+<title>${title}</title>
+</head>
+<body>
+<div class="header"><a href="project.html">Qiita:Team Archive</a></div>
+<div class="banner">
+	<div class="title">${name}</div>
+	<div class="info">
+    <img class="avatar" src="${user.profile_image_url}">
+    <a href="user-${user.permanent_id}.html">${user.id}</a> が投稿 (${created_at})
+  </div>
+</div>
+<div class="article">
+${rendered_body}
+<hr>
+${comments}
+</div>
+
+</body>
+</html>

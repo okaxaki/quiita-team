@@ -1,0 +1,15 @@
+{
+  "name": "quiita-team",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "quiita-team": "bin/cmd.js"
+  },
+  "keywords": [],
+  "author": "Mitsutaka Okazaki",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^0.24.0",
+    "node-getopt": "^0.2.3"
+  }
+}
